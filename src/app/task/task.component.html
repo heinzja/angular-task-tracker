@@ -1,0 +1,20 @@
+<div id="container">
+  <mat-card [ngStyle]="{'background-color': checked ? 'lightgreen': ''}">
+    <mat-card-title>
+      <div #title>
+        <div style="display: inline-block;">{{ task.title ? task.title : 'Task' }}</div>
+        <mat-checkbox (change)="onDoubleClick()" style="padding-left: 15px;" color="primary"></mat-checkbox>
+      </div>
+    </mat-card-title>
+    <mat-card-content>
+      <div>date: {{ task.date | date: "shortDate" }}</div>
+      <br />
+      <div>
+        <p>{{ task.description ? task.description : "no description" }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="error" (click)="onDelete()">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
