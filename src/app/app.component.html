@@ -1,4 +1,5 @@
 <div id="root">
+  <!-- START: HEADER -->
   <div id="header">
     <mat-toolbar color="primary">
       <span>{{title}}</span>
@@ -6,6 +7,8 @@
       <button mat-raised-button (click)="onAdd()">{{showAddTask ? "Close" : "Add"}}</button>
     </mat-toolbar>
   </div>
+  <!-- STOP: HEADER -->
+  <!-- START: CONTENT -->
   <div id="content">
     <div *ngIf="showAddTask" style="margin: auto;">
       <app-add-task (formData_ee)="onFormDataEE($event)"></app-add-task>
@@ -25,7 +28,11 @@
       <h3>No Tasks to Show</h3>
     </ng-template>
     <!-- STOP: NO TASKS MESSAGE -->
-
   </div>
-  <div id="footer"></div>
+  <!-- STOP: CONTENT -->
+  <!-- START: FOOTER -->
+  <div id="footer" style="text-align: center;">
+    <div>Copyright &copy; {{todaysDate}}</div>
+  </div>
+  <!-- STOP: FOOTER -->
 </div>

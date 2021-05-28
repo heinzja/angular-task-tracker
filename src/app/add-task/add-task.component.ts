@@ -9,6 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./add-task.component.scss'],
 })
 export class AddTaskComponent implements OnInit {
+  @Output() formData_ee: EventEmitter<TaskI> = new EventEmitter();
   title: string = '';
   date: Date = new Date();
   description: string = '';
@@ -18,15 +19,22 @@ export class AddTaskComponent implements OnInit {
     description: new FormControl(''),
   });
 
-  @Output() formData_ee: EventEmitter<TaskI> = new EventEmitter();
+  profile = {
+    title: '',
+    date: '',
+    description: ''
+  };
+
+
 
   constructor() {}
 
   ngOnInit(): void {}
 
   onSubmit(data: TaskI): void {
-    console.log('onSubmit data', data);
+    // console.log('onSubmit data', data);
     data.id = Math.floor((Math.random() * 10000)).toString();
     this.formData_ee.emit(data);
+    this.formData.reset(this.profile);
   }
 }

@@ -33,7 +33,7 @@ export class TaskComponent implements OnInit {
 
   onDoubleClick(): void {
     this.checked = !this.checked;
-    console.log('checked: ', this.checked);
+    // console.log('checked: ', this.checked);
   }
 
   onDelete(): void {
