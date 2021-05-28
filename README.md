@@ -1,4 +1,17 @@
 # AngularTaskTracker
+This goal of this project was to recreate [react-task-tracker](https://www.github.com/heinzja/react-task-tracker) in some form or another for the sake of practice developing with the Angular Framework.
+
+# Application Flow Example
+
+![image-1](src/assets/screenshot-1.png)
+
+![image-2](src/assets/screenshot-2.png)
+
+![image-3](src/assets/screenshot-3.png)
+
+![image-4](src/assets/screenshot-4.png)
+
+# Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
